@@ -1,0 +1,16 @@
+server:
+  port: 9999
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: false
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: testuser
+    password: password
+    driver-class-name: org.postgresql.Driver
