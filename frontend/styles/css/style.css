@@ -1,3 +1,7 @@
 .hello {
 	background-color: red;
 }
+
+.rbc-calendar {
+	min-height: 580px;
+}

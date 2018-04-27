@@ -42,6 +42,7 @@ export default class extends React.Component {
         </pre>
         <div>
           <ul>
+              <li><Link route='basic'><a>basic</a></Link></li>
               <li><Link route='hello'><a>hello</a></Link></li>
               <li><Link route='calendar'><a>calendar</a></Link></li>
               <li><Link route='blog' params={{ slug: 'hello-world' }}><a>Blog: Hello world</a></Link></li>
