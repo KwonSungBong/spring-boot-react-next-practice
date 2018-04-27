@@ -14,3 +14,16 @@ spring:
     username: testuser
     password: password
     driver-class-name: org.postgresql.Driver
+
+
+security:
+  oauth2:
+    client:
+      clientId: myClient
+      clientSecret: myClientSecret
+      authorized-grant-types: authorization_code,refresh_token,password
+      scope: openid
+    resource.jwt:
+      key-pair:
+        alias: reservationkey
+        store-password: reservationpass
