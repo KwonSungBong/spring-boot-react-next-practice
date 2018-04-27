@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import { Button } from 'react-bootstrap';
+import '!style-loader!css-loader!../styles/css/style.css';
+import '!style-loader!css-loader!sass-loader!../styles/scss/style.scss';
 
 export default class extends React.Component {
     render () {
@@ -13,7 +15,7 @@ export default class extends React.Component {
                       integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
             </Head>
             <div className='hello'>
-                <p>Hello World</p>
+                <p className='example'>Hello World</p>
                 <Button>Default</Button>
             </div>
         </div>
