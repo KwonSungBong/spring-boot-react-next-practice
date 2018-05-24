@@ -1,6 +1,5 @@
-package com.example.reservation.entity.reservation;
+package com.example.reservation.entity;
 
-import com.example.reservation.entity.Item;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -28,22 +27,16 @@ public class ReservationItem {
 
     private Date endDate;
 
-    private Date completionDate;
-
     public ReservationStatus getReservationStatus() {
         Date nowDate = new Date();
-        if(completionDate == null) {
-            if(nowDate.before(startDate)) {
-                return ReservationStatus.WAITING;
-            } else if(nowDate.after(startDate) && nowDate.before(endDate)) {
-                return ReservationStatus.FINISHED;
-            } else if(nowDate.after(endDate)) {
-                return ReservationStatus.PUBLISHING;
-            } else {
-                throw new RuntimeException("ERROR");
-            }
+        if(nowDate.before(startDate)) {
+            return ReservationStatus.WAITING;
+        } else if(nowDate.after(startDate) && nowDate.before(endDate)) {
+            return ReservationStatus.FINISHED;
+        } else if(nowDate.after(endDate)) {
+            return ReservationStatus.PUBLISHING;
         } else {
-            return ReservationStatus.COMPLETION;
+            throw new RuntimeException("ERROR");
         }
     }
 

@@ -1,6 +1,5 @@
-package com.example.reservation.entity.reservation;
+package com.example.reservation.entity;
 
-import com.example.reservation.entity.User;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
