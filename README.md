@@ -28,9 +28,9 @@ https://npm.taobao.org/package/react-full-calendar
 
 https://github.com/andreiduca/cra-ssr-code-splitting
 
+https://github.com/nodejitsu/node-http-proxy
 
-
-
+https://github.com/KwonSungBong/book-storage-practice/blob/master/apps/frontend/web/admin-view/src/server.js
 
 
 
