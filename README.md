@@ -58,3 +58,10 @@ https://github.com/react-boilerplate/react-boilerplate
 ######################################################################################################
 
 https://github.com/iaincollins/nextjs-starter
+
+# install node v8.10.0
+
+sudo apt-get purge --auto-remove nodejs
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
