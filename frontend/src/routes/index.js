@@ -1,74 +1,36 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
+// We only need to import the modules necessary for initial render
+import CoreLayout from '../layouts/PageLayout/PageLayout'
+import Home from './Home'
+import CounterRoute from './Counter'
 
-/* eslint-disable global-require */
+/*  Note: Instead of using JSX, we recommend using react-router
+    PlainRoute objects to build route definitions.   */
 
-// The top-level (parent) route
-const routes = {
-  path: '',
+export const createRoutes = (store) => ({
+  path        : '/',
+  component   : CoreLayout,
+  indexRoute  : Home,
+  childRoutes : [
+    CounterRoute(store)
+  ]
+})
 
-  // Keep in mind, routes are evaluated in order
-  children: [
-    {
-      path: '',
-      load: () => import(/* webpackChunkName: 'home' */ './home'),
-    },
-    {
-      path: '/contact',
-      load: () => import(/* webpackChunkName: 'contact' */ './contact'),
-    },
-    {
-      path: '/login',
-      load: () => import(/* webpackChunkName: 'login' */ './login'),
-    },
-    {
-      path: '/register',
-      load: () => import(/* webpackChunkName: 'register' */ './register'),
-    },
-    {
-      path: '/about',
-      load: () => import(/* webpackChunkName: 'about' */ './about'),
-    },
-    {
-      path: '/privacy',
-      load: () => import(/* webpackChunkName: 'privacy' */ './privacy'),
-    },
-    {
-      path: '/admin',
-      load: () => import(/* webpackChunkName: 'admin' */ './admin'),
-    },
+/*  Note: childRoutes can be chunked or otherwise loaded programmatically
+    using getChildRoutes with the following signature:
 
-    // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
-    {
-      path: '(.*)',
-      load: () => import(/* webpackChunkName: 'not-found' */ './not-found'),
-    },
-  ],
+    getChildRoutes (location, cb) {
+      require.ensure([], (require) => {
+        cb(null, [
+          // Remove imports!
+          require('./Counter').default(store)
+        ])
+      })
+    }
 
-  async action({ next }) {
-    // Execute each child route until one of them return the result
-    const route = await next();
+    However, this is not necessary for code-splitting! It simply provides
+    an API for async route definitions. Your code splitting should occur
+    inside the route `getComponent` function, since it is only invoked
+    when the route exists and matches.
+*/
 
-    // Provide default values for title, description etc.
-    route.title = `${route.title || 'Untitled Page'} - www.reactstarterkit.com`;
-    route.description = route.description || '';
-
-    return route;
-  },
-};
-
-// The error page is available by permanent url for development mode
-if (__DEV__) {
-  routes.children.unshift({
-    path: '/error',
-    action: require('./error').default,
-  });
-}
-
-export default routes;
+export default createRoutes

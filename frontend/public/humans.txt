@@ -1,15 +1,9 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+# Check it out: http://humanstxt.org/
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+    <name> -- <role> -- <twitter>
 
 # THANKS
 
-  <name>
-
-# TECHNOLOGY COLOPHON
-
-  CSS3, HTML5, JavaScript
-  React Starter Kit -- https://reactstarter.com/
+    <name>

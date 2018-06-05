@@ -38,11 +38,17 @@ https://github.com/KwonSungBong/book-storage-practice/blob/master/apps/frontend/
 https://github.com/mapbox/node-sqlite3/issues/758
 sudo apt-get purge --auto-remove nodejs
 https://gist.github.com/craigvantonder/3e64b2f9bed8c4b38ba80f54b794f353
-https://github.com/vuejs/vue-cli/issues/1162
+https://github.com/vuejs/vue-cli/issues/1162sclear
 https://github.com/kriasoft/react-starter-kit/blob/master/docs/getting-started.md
 
 
 yarn install
 yarn start
 
+yarn add http-proxy
 
+
+
+################################################################################################
+
+https://github.com/davezuko/react-redux-starter-kit.git
