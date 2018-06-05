@@ -51,4 +51,4 @@ yarn add http-proxy
 
 ################################################################################################
 
-https://github.com/davezuko/react-redux-starter-kit.git
+https://github.com/react-boilerplate/react-boilerplate
