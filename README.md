@@ -70,5 +70,5 @@ https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubunt
 
 https://github.com/zeit/next.js/blob/canary/examples/form-handler/package.json
 
-
+https://github.com/zeit/next.js/tree/canary/examples/data-fetch
 
