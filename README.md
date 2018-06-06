@@ -81,13 +81,6 @@ https://github.com/zeit/next.js/tree/canary/examples/form-handler
 create-next-app --example form-handler frontend
 
 
-1. 서버사이드랜더링
-2. 데이터통신
-3. 로그인
-4. 레이아웃
-5. 세션종료시 페이지 이동
-
-
 ######################################################################################################
 
 
@@ -98,3 +91,33 @@ create-next-app --example with-static-export with-static-export
 
 
 http://amina.co.kr/bbs/board.php?bo_table=apms_qa&wr_id=93495
+
+
+######################################################################################################
+
+
+1. 레이아웃
+https://github.com/zeit/next.js/tree/canary/examples/layout-component
+https://github.com/zeit/next.js/tree/canary/examples/with-app-layout
+
+2. 로그인
+
+3. ssr
+https://github.com/zeit/next.js/tree/canary/examples/progressive-render
+
+4. editor
+https://github.com/zeit/next.js/tree/canary/examples/with-draft-js
+
+
+######################################################
+
+https://steemit.com/
+
+
+상단, 상단에 슬라이드 필요
+완쪽, 중간, 오른쪽
+
+108
+
+
+
