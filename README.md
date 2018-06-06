@@ -88,3 +88,13 @@ create-next-app --example form-handler frontend
 5. 세션종료시 페이지 이동
 
 
+######################################################################################################
+
+
+https://github.com/zeit/next.js/tree/canary/examples/with-static-export
+
+
+create-next-app --example with-static-export with-static-export
+
+
+http://amina.co.kr/bbs/board.php?bo_table=apms_qa&wr_id=93495

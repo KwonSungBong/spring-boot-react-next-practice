@@ -13,6 +13,13 @@ app.prepare()
       return handle(req, res)
     })
 
+    // custom route for posts
+    // server.get('/async/post/:id', (req, res) => {
+    //     return app.render(req, res, '/async/post', {
+    //         id: req.params.id
+    //     })
+    // })
+
     server.get('*', (req, res) => {
       return handle(req, res)
     })
