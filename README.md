@@ -85,5 +85,6 @@ create-next-app --example form-handler frontend
 2. 데이터통신
 3. 로그인
 4. 레이아웃
+5. 세션종료시 페이지 이동
 
 
