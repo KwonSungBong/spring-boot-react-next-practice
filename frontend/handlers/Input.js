@@ -14,7 +14,7 @@ class Input extends Component {
   render () {
     return (
       <div>
-        <FormGroup controlId='formBasicText'>
+        <FormGroup controlId={this.props.controlId}>
           <ControlLabel>{this.props.controlLabel}</ControlLabel>
           <FormControl
             disabled={this.props.disabled}

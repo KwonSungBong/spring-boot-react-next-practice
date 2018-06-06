@@ -7,16 +7,16 @@ const Social = () => {
     <div>
       <Row>
         <Col lg={8}>
-          <Input controlLabel='Facebook' title='social' name='facebook' />
+          <Input controlId='form-facebook' controlLabel='Facebook' title='social' name='facebook' />
         </Col>
         <Col lg={8}>
-          <Input controlLabel='Instagram' title='social' name='instagram' />
+          <Input controlId='form-instagram' controlLabel='Instagram' title='social' name='instagram' />
         </Col>
         <Col lg={8}>
-          <Input controlLabel='Twitter' title='social' name='twitter' />
+          <Input controlId='form-twitter' controlLabel='Twitter' title='social' name='twitter' />
         </Col>
         <Col lg={8}>
-          <Input controlLabel='Github' title='social' name='github' />
+          <Input controlId='form-github' controlLabel='Github' title='social' name='github' />
         </Col>
       </Row>
     </div>
