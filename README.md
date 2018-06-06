@@ -73,8 +73,17 @@ https://medium.com/@katopz/how-to-install-specific-nodejs-version-c6e1cec8aa11
 
 
 
+######################################################################################################
 
-https://github.com/zeit/next.js/blob/canary/examples/form-handler/package.json
+https://github.com/segmentio/create-next-app#starting-from-examples
+https://github.com/zeit/next.js/tree/canary/examples/form-handler
 
-https://github.com/zeit/next.js/tree/canary/examples/data-fetch
+create-next-app --example form-handler frontend
+
+
+1. 서버사이드랜더링
+2. 데이터통신
+3. 로그인
+4. 레이아웃
+
 
