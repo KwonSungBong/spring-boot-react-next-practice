@@ -1,2 +1,2 @@
 export * from './formActionsCreators'
-export * from './postActions'
+export * from './productActions'

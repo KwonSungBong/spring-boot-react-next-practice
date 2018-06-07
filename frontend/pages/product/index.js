@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchProducts } from "../../actions/postActions";
+import { fetchProducts } from "../../actions/productActions";
 
 class ProductList extends React.Component {
     static async getInitialProps ({ store, isServer }) {
@@ -37,9 +37,9 @@ class ProductList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    products: state.post.items,
-    loading: state.post.loading,
-    error: state.post.error
+    products: state.product.items,
+    loading: state.product.loading,
+    error: state.product.error
 });
 
 const mapDispatchToProps = (dispatch) => {

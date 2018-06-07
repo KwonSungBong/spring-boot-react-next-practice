@@ -26,7 +26,7 @@ class Index extends React.Component {
                     <Link href='/async' as='/async'><a>asynctest</a></Link>
                 </div>
                 <div>
-                    <Link href='/post' as='/post'><a>post</a></Link>
+                    <Link href='/product' as='/product'><a>product</a></Link>
                 </div>
             </div>
         )

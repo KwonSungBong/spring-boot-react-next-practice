@@ -124,3 +124,10 @@ https://steemit.com/
 상단, 상단에 슬라이드 필요
 완쪽, 중간, 오른쪽
 
+https://github.com/agraboso/redux-api-middleware
+
+const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore);
+
+
+
+

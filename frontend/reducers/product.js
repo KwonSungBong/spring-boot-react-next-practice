@@ -2,7 +2,7 @@ import {
     FETCH_PRODUCTS_BEGIN,
     FETCH_PRODUCTS_SUCCESS,
     FETCH_PRODUCTS_FAILURE
-} from '../actions/postActions';
+} from '../actions/productActions';
 
 const initialState = {
     items: [],
@@ -11,7 +11,6 @@ const initialState = {
 };
 
 export default function productReducer(state = initialState, action) {
-    console.log("state", state);
     switch(action.type) {
         case FETCH_PRODUCTS_BEGIN:
             // Mark the state as "loading" so we can show a spinner or something
