@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { bindActionCreators } from 'redux'
-import { startClock, addCount, serverRenderClock } from '../store'
 import { connect } from 'react-redux'
 
 class Index extends React.Component {
@@ -24,7 +23,10 @@ class Index extends React.Component {
                     <Link href='/async/async' as='/async/async'><a>asyncasync</a></Link>
                 </div>
                 <div>
-                    <Link href='/async' as='/async'><a>post</a></Link>
+                    <Link href='/async' as='/async'><a>asynctest</a></Link>
+                </div>
+                <div>
+                    <Link href='/post' as='/post'><a>post</a></Link>
                 </div>
             </div>
         )

@@ -109,6 +109,8 @@ https://github.com/zeit/next.js/tree/canary/examples/progressive-render
 https://github.com/zeit/next.js/tree/canary/examples/with-draft-js
 
 5. redux
+https://daveceddia.com/where-fetch-data-redux/
+
 
 ######################################################
 
@@ -119,6 +121,5 @@ https://steemit.com/
 완쪽, 중간, 오른쪽
 
 108
-
 
 

@@ -14,6 +14,7 @@ public class PostController {
     @Autowired
     private PostRepository postRepository;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     public Iterable<Post> findSummaryList(){
         return postRepository.findAll();

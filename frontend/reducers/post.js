@@ -1,58 +1,52 @@
-import { FIND_POST_SUMMARY_LIST,FIND_POST_SUMMARY_LIST_SUCCESS,FIND_POST_SUMMARY_LIST_FAIL,
-    FIND_POST_DETAIL_ONE, FIND_POST_DETAIL_ONE_SUCCESS, FIND_POST_DETAIL_ONE_FAIL,
-    CREATE_POST, CREATE_POST_SUCCESS, CREATE_POST_FAIL,
-    UPDATE_POST, UPDATE_POST_SUCCESS, UPDATE_FAIL,
-    REMOVE_POST, REMOVE_POST_SUCCESS, REMOVE_POST_FAIL } from '../constants'
+import {
+    FETCH_PRODUCTS_BEGIN,
+    FETCH_PRODUCTS_SUCCESS,
+    FETCH_PRODUCTS_FAILURE
+} from '../actions/postActions';
 
 const initialState = {
+    items: [],
     loading: false,
-    summaryList: {},
-    infiniteSummaryList: {},
-    detailOne: {},
-    searchStatus: [],
-    search: {}
+    error: null
 };
 
-export default (state = initialState, action) => {
-    switch (action.type) {
-        case FIND_POST_SUMMARY_LIST:
-            return { ...state}
-        case FIND_POST_SUMMARY_LIST_SUCCESS:
-            return { ...state}
-        case FIND_POST_SUMMARY_LIST_FAIL:
-            return { ...state}
-        case FIND_POST_DETAIL_ONE:
-            return { ...state}
-        case FIND_POST_DETAIL_ONE_SUCCESS:
-            return { ...state}
-        case FIND_POST_DETAIL_ONE_FAIL:
-            return { ...state}
-        case CREATE_POST:
-            return { ...state}
-        case CREATE_POST_SUCCESS:
-            return { ...state}
-        case CREATE_POST_FAIL:
-            return { ...state}
-        case UPDATE_POST:
-            return { ...state}
-        case UPDATE_POST_SUCCESS:
-            return { ...state}
-        case UPDATE_FAIL:
-            return { ...state}
-        case REMOVE_POST:
-            return { ...state}
-        case REMOVE_POST_SUCCESS:
-            return { ...state}
-        case REMOVE_POST_FAIL:
-            return { ...state}
-        default:
-            return state
-    }
-}
+export default function productReducer(state = initialState, action) {
+    console.log("state", state);
+    switch(action.type) {
+        case FETCH_PRODUCTS_BEGIN:
+            // Mark the state as "loading" so we can show a spinner or something
+            // Also, reset any errors. We're starting fresh.
+            return {
+                ...state,
+                loading: true,
+                error: null
+            };
 
-export function findSummaryList(){
-    return {
-        types: [FIND_POST_SUMMARY_LIST, FIND_POST_SUMMARY_LIST_SUCCESS, FIND_POST_SUMMARY_LIST_FAIL],
-        promise: (client) => client.get('/post')
+        case FETCH_PRODUCTS_SUCCESS:
+            console.log("SADSADSAD", action)
+            // All done: set loading "false".
+            // Also, replace the items with the ones from the server
+            return {
+                ...state,
+                loading: false,
+                items: action.payload.products
+            };
+
+        case FETCH_PRODUCTS_FAILURE:
+            // The request failed, but it did stop, so set loading to "false".
+            // Save the error, and we can display it somewhere
+            // Since it failed, we don't have items to display anymore, so set it empty.
+            // This is up to you and your app though: maybe you want to keep the items
+            // around! Do whatever seems right.
+            return {
+                ...state,
+                loading: false,
+                error: action.payload.error,
+                items: []
+            };
+
+        default:
+            // ALWAYS have a default case in a reducer
+            return state;
     }
 }
