@@ -111,6 +111,12 @@ https://github.com/zeit/next.js/tree/canary/examples/with-draft-js
 5. redux
 https://daveceddia.com/where-fetch-data-redux/
 
+https://github.com/agraboso/redux-api-middleware
+https://github.com/ashleyw/react-redux-api-middleware-example
+
+const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore);
+
+
 
 curl http://localhost:9999/post/test
 curl http://localhost:9999/post
@@ -123,10 +129,6 @@ https://steemit.com/
 
 상단, 상단에 슬라이드 필요
 완쪽, 중간, 오른쪽
-
-https://github.com/agraboso/redux-api-middleware
-
-const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore);
 
 
 
