@@ -109,6 +109,11 @@ https://github.com/zeit/next.js/tree/canary/examples/progressive-render
 4. editor
 https://github.com/zeit/next.js/tree/canary/examples/with-draft-js
 
+create-next-app --example with-draft-js with-draft-js
+https://www.draft-js-plugins.com/plugin/image
+
+
+
 5. redux
 https://daveceddia.com/where-fetch-data-redux/
 
@@ -143,7 +148,5 @@ https://steemit.com/
 
 상단, 상단에 슬라이드 필요
 완쪽, 중간, 오른쪽
-
-
 
 
