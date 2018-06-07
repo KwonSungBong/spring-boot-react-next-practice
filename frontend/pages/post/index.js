@@ -4,7 +4,12 @@ import { fetchProducts } from "../../actions/postActions";
 
 class ProductList extends React.Component {
     static async getInitialProps ({ store, isServer }) {
-        await store.dispatch(fetchProducts())
+        console.log("isServer", isServer)
+        if(isServer) {
+            await store.dispatch(fetchProducts())
+        } else {
+            store.dispatch(fetchProducts())
+        }
         return { isServer }
     }
 

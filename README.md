@@ -112,6 +112,10 @@ https://github.com/zeit/next.js/tree/canary/examples/with-draft-js
 https://daveceddia.com/where-fetch-data-redux/
 
 
+curl http://localhost:9999/post/test
+curl http://localhost:9999/post
+
+
 ######################################################
 
 https://steemit.com/
@@ -121,5 +125,4 @@ https://steemit.com/
 완쪽, 중간, 오른쪽
 
 108
-
 

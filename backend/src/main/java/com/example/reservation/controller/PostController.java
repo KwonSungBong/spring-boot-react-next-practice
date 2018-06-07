@@ -16,7 +16,13 @@ public class PostController {
 
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
-    public Iterable<Post> findSummaryList(){
+    public Iterable<Post> findSummaryList() {
+        try {
+            Thread.sleep(5000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         return postRepository.findAll();
     }
 
