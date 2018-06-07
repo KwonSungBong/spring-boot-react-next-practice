@@ -116,10 +116,21 @@ https://github.com/ashleyw/react-redux-api-middleware-example
 
 const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore);
 
-
-
 curl http://localhost:9999/post/test
 curl http://localhost:9999/post
+
+6. 무한스크롤
+https://github.com/CassetteRocks/react-infinite-scroller
+https://github.com/ankeetmaini/react-infinite-scroll-component
+https://github.com/seatgeek/react-infinite
+
+7. 밸리데이터
+https://github.com/erikras/redux-form
+sync, async validate
+
+
+8.사이드메뉴
+
 
 
 ######################################################
