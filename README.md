@@ -101,6 +101,7 @@ https://github.com/zeit/next.js/tree/canary/examples/layout-component
 https://github.com/zeit/next.js/tree/canary/examples/with-app-layout
 
 2. 로그인
+token
 
 3. ssr
 https://github.com/zeit/next.js/tree/canary/examples/progressive-render
