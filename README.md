@@ -108,6 +108,7 @@ https://github.com/zeit/next.js/tree/canary/examples/progressive-render
 4. editor
 https://github.com/zeit/next.js/tree/canary/examples/with-draft-js
 
+5. redux
 
 ######################################################
 
