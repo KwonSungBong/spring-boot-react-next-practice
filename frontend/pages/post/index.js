@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import Link from 'next/link'
 import { fetchPosts } from '../../actions/postsActions'
 
 class ProductList extends React.Component {
@@ -14,7 +15,7 @@ class ProductList extends React.Component {
     }
 
     render() {
-        const { error, loading, postsList } = this.props;
+        const { error, postsList } = this.props;
 
         if (error) {
             return <div>Error! {error.message}</div>;
@@ -26,6 +27,9 @@ class ProductList extends React.Component {
 
         return (
             <div>
+                <div>
+                    <Link href='/post/form' as='/post/form'><a>form</a></Link>
+                </div>
                 <ul>
                     {postsList.posts.map(product =>
                         <li key={product.id}>{product.subject}</li>
@@ -40,9 +44,4 @@ const mapStateToProps = state => ({
     postsList: state.post.postsList
 });
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductList)
+export default connect(mapStateToProps, null)(ProductList)
