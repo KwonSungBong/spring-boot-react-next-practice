@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import withRedux from 'next-redux-wrapper'
+import { connect } from 'react-redux'
 
 import Main from '../../components/index'
-
-import { initStore } from '../../store'
 
 class Index extends Component {
   render () {
@@ -11,4 +9,9 @@ class Index extends Component {
   }
 }
 
-export default withRedux(initStore, null)(Index)
+const mapDispatchToProps = (dispatch) => {
+    return {
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Index)

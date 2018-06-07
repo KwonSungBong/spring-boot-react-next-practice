@@ -1,23 +1,39 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import withRedux from 'next-redux-wrapper'
+import { bindActionCreators } from 'redux'
+import { startClock, addCount, serverRenderClock } from '../store'
+import { connect } from 'react-redux'
 
-import { initStore } from '../store'
+class Index extends React.Component {
+    static getInitialProps ({ store, isServer }) {
+    }
 
-class Index extends Component {
-  render () {
-    return <div>
-        <div>
-            <Link href='/form' as='/form'><a>form</a></Link>
-        </div>
-        <div>
-            <Link href='/async/async' as='/async/async'><a>asyncasync</a></Link>
-        </div>
-        <div>
-            <Link href='/async' as='/async'><a>post</a></Link>
-        </div>
-    </div>
-  }
+    componentDidMount () {
+    }
+
+    componentWillUnmount () {
+    }
+
+    render () {
+        return (
+            <div>
+                <div>
+                    <Link href='/form' as='/form'><a>form</a></Link>
+                </div>
+                <div>
+                    <Link href='/async/async' as='/async/async'><a>asyncasync</a></Link>
+                </div>
+                <div>
+                    <Link href='/async' as='/async'><a>post</a></Link>
+                </div>
+            </div>
+        )
+    }
 }
 
-export default withRedux(initStore, null)(Index)
+const mapDispatchToProps = (dispatch) => {
+    return {
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Index)
