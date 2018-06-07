@@ -28,6 +28,9 @@ class Index extends React.Component {
                 <div>
                     <Link href='/product' as='/product'><a>product</a></Link>
                 </div>
+                <div>
+                    <Link href='/post' as='/post'><a>post</a></Link>
+                </div>
             </div>
         )
     }
