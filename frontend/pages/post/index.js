@@ -25,11 +25,13 @@ class ProductList extends React.Component {
         }
 
         return (
-            <ul>
-                {products.map(product =>
-                    <li key={product.id}>{product.subject}</li>
-                )}
-            </ul>
+            <div>
+                <ul>
+                    {products.map(product =>
+                        <li key={product.id}>{product.subject}</li>
+                    )}
+                </ul>
+            </div>
         );
     }
 }
