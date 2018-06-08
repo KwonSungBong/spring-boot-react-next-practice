@@ -133,10 +133,10 @@ https://github.com/seatgeek/react-infinite
 7. 밸리데이터
 https://github.com/erikras/redux-form
 sync, async validate
-
-https://codesandbox.io/s/MQnD536Km
+https://github.com/erikras/redux-form/tree/master/examples
 https://redux-form.com/7.3.0/examples
-https://codesandbox.io/s/pQj03w7Y6
+
+
 
 8.사이드메뉴
 

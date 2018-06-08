@@ -28,7 +28,13 @@ class ProductList extends React.Component {
         return (
             <div>
                 <div>
-                    <Link href='/post/form' as='/post/form'><a>form</a></Link>
+                    <Link href='/post/submitform' as='/post/submitform'><a>submitform</a></Link>
+                </div>
+                <div>
+                    <Link href='/post/syncform' as='/post/syncform'><a>syncform</a></Link>
+                </div>
+                <div>
+                    <Link href='/post/asyncform' as='/post/asyncform'><a>asyncform</a></Link>
                 </div>
                 <ul>
                     {postsList.posts.map(product =>

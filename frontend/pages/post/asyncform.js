@@ -1,32 +1,37 @@
-import React from 'react';
-import {Form, FormControl, FormGroup, HelpBlock, Col, ButtonGroup, Button, Thumbnail} from 'react-bootstrap';
-import { connect } from 'react-redux'
+import React from 'react'
 import { Field, reduxForm } from 'redux-form'
+import validate from './validate'
+import asyncValidate from './asyncValidate'
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => (
+const renderField = ({
+     input,
+     label,
+     type,
+     meta: { asyncValidating, touched, error }
+ }) => (
     <div>
         <label>{label}</label>
-        <div>
-            <input {...input} placeholder={label} type={type} />
+        <div className={asyncValidating ? 'async-validating' : ''}>
+            <input {...input} type={type} placeholder={label} />
             {touched && error && <span>{error}</span>}
         </div>
     </div>
 )
 
-class ProductForm extends React.Component {
+class AsyncForm extends React.Component {
 
     static getInitialProps ({ store, isServer }) {
         console.log("isServer", isServer)
     }
 
     render() {
-        const {error, handleSubmit, pristine, reset, submitting} = this.props;
+        const {handleSubmit, pristine, reset, submitting} = this.props;
 
         console.log("ASD", this.props)
 
         return (
             <form onSubmit={handleSubmit((values) => {
-                console.log(values)
+                console.log("values", values)
             })}>
                 <Field
                     name="subject"
@@ -40,7 +45,6 @@ class ProductForm extends React.Component {
                     component={renderField}
                     label="Content"
                 />
-                {error && <strong>{error}</strong>}
                 <div>
                     <button type="submit" disabled={submitting}>
                         save
@@ -54,19 +58,9 @@ class ProductForm extends React.Component {
     }
 }
 
-// ProductForm = reduxForm({
-//     form: 'postForm',
-//     fields: ['subject', 'content'],
-// })(ProductForm);
-//
-// ProductForm = connect(
-//     state => ({
-//     }),
-//     {},
-// )(ProductForm);
-//
-// export default ProductForm;
-
 export default reduxForm({
-    form: 'postForm',
-})(ProductForm)
+    form: 'asyncForm', // a unique identifier for this form
+    validate,
+    asyncValidate,
+    asyncBlurFields: ['subject']
+})(AsyncForm)
