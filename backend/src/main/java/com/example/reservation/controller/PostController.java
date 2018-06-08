@@ -49,6 +49,12 @@ public class PostController {
         postRepository.deleteById(id);
     }
 
+    @GetMapping("/exist/subject/{subject}")
+    public boolean existSubject(@PathVariable("subject") String subject){
+        if(postRepository.findBySubject(subject) == null) return false;
+        else return true;
+    }
+
     @GetMapping("/test")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void test() {
