@@ -84,19 +84,6 @@ class SyncForm extends React.Component {
     }
 }
 
-// ProductForm = reduxForm({
-//     form: 'postForm',
-//     fields: ['subject', 'content'],
-// })(ProductForm);
-//
-// ProductForm = connect(
-//     state => ({
-//     }),
-//     {},
-// )(ProductForm);
-//
-// export default ProductForm;
-
 export default reduxForm({
     form: 'syncForm',
     validate, // <--- validation function given to redux-form
