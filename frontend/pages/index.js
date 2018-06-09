@@ -34,6 +34,12 @@ class Index extends React.Component {
                 <div>
                     <Link href='/image' as='/image'><a>image</a></Link>
                 </div>
+                <div>
+                    <Link href='/editor' as='/editor'><a>editor</a></Link>
+                </div>
+                <div>
+                    <Link href='/editor/image' as='/editor/image'><a>editor/image</a></Link>
+                </div>
             </div>
         )
     }

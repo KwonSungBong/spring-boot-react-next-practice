@@ -4,12 +4,48 @@ import {
     EditorState,
 } from 'draft-js';
 
-import Editor from 'draft-js-plugins-editor';
+import Editor, { composeDecorators } from 'draft-js-plugins-editor';
 
 import createImagePlugin from 'draft-js-image-plugin';
 
-const imagePlugin = createImagePlugin();
-const plugins = [imagePlugin];
+import createAlignmentPlugin from 'draft-js-alignment-plugin';
+
+import createFocusPlugin from 'draft-js-focus-plugin';
+
+import createResizeablePlugin from 'draft-js-resizeable-plugin';
+
+import createBlockDndPlugin from 'draft-js-drag-n-drop-plugin';
+
+import createDragNDropUploadPlugin from '@mikeljames/draft-js-drag-n-drop-upload-plugin';
+import mockUpload from './mockUpload';
+
+const focusPlugin = createFocusPlugin();
+const resizeablePlugin = createResizeablePlugin();
+const blockDndPlugin = createBlockDndPlugin();
+const alignmentPlugin = createAlignmentPlugin();
+const { AlignmentTool } = alignmentPlugin;
+
+const decorator = composeDecorators(
+    resizeablePlugin.decorator,
+    alignmentPlugin.decorator,
+    focusPlugin.decorator,
+    blockDndPlugin.decorator
+);
+const imagePlugin = createImagePlugin({ decorator });
+
+const dragNDropFileUploadPlugin = createDragNDropUploadPlugin({
+    handleUpload: mockUpload,
+    addImage: imagePlugin.addImage,
+});
+
+const plugins = [
+    dragNDropFileUploadPlugin,
+    blockDndPlugin,
+    focusPlugin,
+    alignmentPlugin,
+    resizeablePlugin,
+    imagePlugin
+];
 
 /* eslint-disable */
 const initialState = {
@@ -54,7 +90,7 @@ const initialState = {
 };
 /* eslint-enable */
 
-export default class SimpleImageEditor extends Component {
+export default class CustomImageEditor extends Component {
 
     state = {
         editorState: EditorState.createWithContent(convertFromRaw(initialState)),
@@ -80,6 +116,7 @@ export default class SimpleImageEditor extends Component {
                         plugins={plugins}
                         ref={(element) => { this.editor = element; }}
                     />
+                    <AlignmentTool />
                 </div>
             </div>
         );

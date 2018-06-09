@@ -113,8 +113,6 @@ create-next-app --example with-draft-js with-draft-js
 https://www.draft-js-plugins.com/plugin/image
 
 
-https://github.com/erikras/redux-form/issues/3686
-
 5. redux
 https://daveceddia.com/where-fetch-data-redux/
 
@@ -155,6 +153,42 @@ https://steemit.com/
 
 상단, 상단에 슬라이드 필요
 완쪽, 중간, 오른쪽
+
+
+######################################################
+
+https://github.com/draft-js-plugins/draft-js-plugins
+
+https://www.draft-js-plugins.com/plugin/image
+
+http://www.bvbcode.com/code/f7gtwq4o
+
+
+draft-js-alignment-plugin
+draft-js-focus-plugin
+draft-js-resizeable-plugin
+draft-js-drag-n-drop-plugin
+draft-js-drag-n-drop-upload-plugin
+... 
+draft-js-drag-n-drop-upload-plugin
+yarn add @mikeljames/draft-js-drag-n-drop-upload-plugin
+https://www.bountysource.com/issues/43737242-draft-js-video-plugin-and-draft-js-drag-n-drop-upload-plugin-npm-problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
