@@ -1,6 +1,17 @@
 server:
   port: 9999
 
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 50MB
+      max-request-size: 75MB
+
+file.upload-dir: ./uploads
+
+
 security:
   oauth2:
     client:

@@ -50,6 +50,7 @@ class ImageForm extends React.Component {
                         Clear Values
                     </button>
                 </div>
+                <img src="http://localhost:9999/image/downloadFile/test" />
             </form>
         )
     }
