@@ -126,10 +126,7 @@ const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStor
 curl http://localhost:9999/post/test
 curl http://localhost:9999/post
 
-6. 무한스크롤
-https://github.com/CassetteRocks/react-infinite-scroller
-https://github.com/ankeetmaini/react-infinite-scroll-component
-https://github.com/seatgeek/react-infinite
+6. chrome react redux devtools install
 
 7. 밸리데이터
 https://github.com/erikras/redux-form
@@ -142,7 +139,12 @@ https://github.com/agraboso/redux-api-middleware/issues/128
 https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/
 
 
-9.사이드메뉴
+9. 무한스크롤
+https://github.com/CassetteRocks/react-infinite-scroller
+https://github.com/ankeetmaini/react-infinite-scroll-component
+https://github.com/seatgeek/react-infinite
+
+10. 사이드메뉴 레이아웃
 
 
 
@@ -153,6 +155,10 @@ https://steemit.com/
 
 상단, 상단에 슬라이드 필요
 완쪽, 중간, 오른쪽
+
+
+
+
 
 
 
