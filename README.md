@@ -112,6 +112,16 @@ https://github.com/zeit/next.js/tree/canary/examples/with-draft-js
 create-next-app --example with-draft-js with-draft-js
 https://www.draft-js-plugins.com/plugin/image
 
+draft-js-alignment-plugin
+draft-js-focus-plugin
+draft-js-resizeable-plugin
+draft-js-drag-n-drop-plugin
+draft-js-drag-n-drop-upload-plugin
+... 
+draft-js-drag-n-drop-upload-plugin
+yarn add @mikeljames/draft-js-drag-n-drop-upload-plugin
+https://www.bountysource.com/issues/43737242-draft-js-video-plugin-and-draft-js-drag-n-drop-upload-plugin-npm-problem
+
 
 5. redux
 https://daveceddia.com/where-fetch-data-redux/
@@ -162,23 +172,6 @@ https://github.com/draft-js-plugins/draft-js-plugins
 https://www.draft-js-plugins.com/plugin/image
 
 http://www.bvbcode.com/code/f7gtwq4o
-
-
-draft-js-alignment-plugin
-draft-js-focus-plugin
-draft-js-resizeable-plugin
-draft-js-drag-n-drop-plugin
-draft-js-drag-n-drop-upload-plugin
-... 
-draft-js-drag-n-drop-upload-plugin
-yarn add @mikeljames/draft-js-drag-n-drop-upload-plugin
-https://www.bountysource.com/issues/43737242-draft-js-video-plugin-and-draft-js-drag-n-drop-upload-plugin-npm-problem
-
-
-
-
-
-
 
 
 
